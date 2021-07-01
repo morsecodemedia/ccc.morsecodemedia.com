@@ -107,8 +107,8 @@ export default {
   name: 'Form',
   data () {
     return {
-      backgroundColor: '',
-      textColor: '',
+      backgroundColor: '#985895FF',
+      textColor: '#FCF49FFF',
       contrastRatio: '',
       aaNormal: false,
       aaLarge: false,
