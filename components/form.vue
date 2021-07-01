@@ -13,9 +13,9 @@
             <v-card
               color="transparent"
             >
-              <v-subheader>Background Color</v-subheader>
+              <v-card-title>Background Color</v-card-title>
               <v-card-text>
-                <v-row>
+                <v-row justify="center">
                   <v-color-picker
                     v-model="backgroundColor"
                     mode="hexa"
@@ -33,9 +33,9 @@
             <v-card
               color="transparent"
             >
-              <v-subheader>Text Color</v-subheader>
+              <v-card-title>Text Color</v-card-title>
               <v-card-text>
-                <v-row>
+                <v-row justify="center">
                   <v-color-picker
                     v-model="textColor"
                     mode="hexa"
@@ -51,45 +51,46 @@
             cols="12"
           >
             <v-card
-              flex="12"
               color="transparent"
             >
-              <v-subheader>Font Size</v-subheader>
-              <v-card-text>
-                <v-row>
-                  <v-col cols="8">
-                    <v-slider
-                      v-model="fontSize"
-                      class="align-center"
-                      :max="92"
-                      :min="12"
-                      hide-details
-                    />
-                  </v-col>
-                  <v-col cols="4">
-                    <v-text-field
-                      v-model="fontSize"
-                      class="mt-0 pt-0"
-                      hide-details
-                      single-line
-                      type="number"
-                      style="width:50px; display: inline-block;"
-                    />px
-                  </v-col>
-                </v-row>
-              </v-card-text>
+              <v-card-title>Contrast Ratio</v-card-title>
+              <v-card-subtitle class="contrast-ratio">{{ contrastRatio }}<span class="outof">/21</span></v-card-subtitle>
+
+              <v-simple-table>
+                <thead>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th>Normal Text</th>
+                    <th>Large Text</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="noclass">AA</td>
+                    <td :class="{pass: aaNormal}">{{ (this.aaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: aaLarge}">{{ (this.aaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                  </tr>
+                  <tr>
+                    <td class="noclass">AAA</td>
+                    <td :class="{pass: aaaNormal}">{{ (this.aaaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: aaaLarge}">{{ (this.aaaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                  </tr>
+                </tbody>
+              </v-simple-table>
             </v-card>
           </v-col>
         </v-row>
 
         <v-row>
           <v-card
-            :style="{backgroundColor: backgroundColor, color: textColor, fontSize: fontSize + 'px', lineHeight: '1.2em',}"
+            :style="{backgroundColor: backgroundColor, color: textColor}"
             class="preview"
           >
-            <p>
-              The quick brown fox jumps over the lazy dog.
-            </p>
+            <p class="large-text">Large Text - 24px</p>
+            <p class="large-text">Contrast ratio is a measure of the difference in perceived brightness between two colors. The higher the ratio, the better the contrast.</p>
+
+            <p class="normal-text">Normal Text - 16px</p>
+            <p class="normal-text">According to Web Content Accessibility Guidelines (WCAG) 2.0, text and images of text should have a minimum contrast ratio of 4.5:1 (Level AA), while large text should have minimum contrast ratio of 3:1. For enhanced contrast (Level AAA), normal text and large text should have minimum contrast ratio of 7:1 and 4.5:1 respectively.</p>
           </v-card>
         </v-row>
       </v-container>
@@ -98,13 +99,38 @@
 </template>
 
 <script>
+import { colord, extend } from 'colord'
+import a11yPlugin from 'colord/plugins/a11y'
+extend([a11yPlugin])
+
 export default {
   name: 'Form',
   data () {
     return {
       backgroundColor: '',
       textColor: '',
-      fontSize: '16'
+      contrastRatio: '',
+      aaNormal: false,
+      aaLarge: false,
+      aaaNormal: false,
+      aaaLarge: false
+    }
+  },
+  watch: {
+    backgroundColor () {
+      this.checkColorContrast(this.textColor, this.backgroundColor)
+    },
+    textColor () {
+      this.checkColorContrast(this.textColor, this.backgroundColor)
+    }
+  },
+  methods: {
+    checkColorContrast (txt, bg) {
+      this.contrastRatio = colord(txt).contrast(bg)
+      this.aaNoraml = this.contrastRatio >= 4.5
+      this.aaLarge = this.contrastRatio >= 3
+      this.aaaNormal = this.contrastRatio >= 7
+      this.aaaLarge = this.contrastRatio >= 4.5
     }
   }
 }
@@ -115,5 +141,28 @@ export default {
   width: 100%;
   max-width: 1000px;
   padding: 15px 15px 0 15px;
+}
+.large-text {
+  font-size: 24px;
+  line-height: 1.2em;
+}
+.normal-text {
+  font-size: 16px;
+  line-height: 1.2em;
+}
+.contrast-ratio {
+  font-size: 24px;
+}
+.outof {
+  font-size: 16px;
+}
+td {
+  color: red;
+}
+td.noclass {
+  color: unset;
+}
+.pass {
+  color: green;
 }
 </style>

@@ -26,6 +26,7 @@
     "@nuxtjs/redirect-module": "^0.3.1",
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/sitemap": "^2.3.2",
+    "colord": "^2.1.0",
     "express": "^4.17.1",
     "nuxt": "^2.0.0"
   },
