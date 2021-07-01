@@ -127,7 +127,7 @@ export default {
   methods: {
     checkColorContrast (txt, bg) {
       this.contrastRatio = colord(txt).contrast(bg)
-      this.aaNoraml = this.contrastRatio >= 4.5
+      this.aaNormal = this.contrastRatio >= 4.5
       this.aaLarge = this.contrastRatio >= 3
       this.aaaNormal = this.contrastRatio >= 7
       this.aaaLarge = this.contrastRatio >= 4.5
