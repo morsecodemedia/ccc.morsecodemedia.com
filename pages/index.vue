@@ -1,12 +1,14 @@
 <template>
-  <h1>
-    Hello World!
-  </h1>
+  <Form />
 </template>
 
 <script>
+import Form from '~/components/form.vue'
 export default {
   name: 'Homepage',
+  components: {
+    Form
+  },
   head () {
     return {
       title: '',
