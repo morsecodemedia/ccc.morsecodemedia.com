@@ -6,6 +6,7 @@
       max-width="1000"
     >
       <v-container fluid>
+        <h1>Color Contrast Checker</h1>
         <v-row>
           <v-col
             cols="6"
@@ -115,6 +116,9 @@ export default {
       aaaNormal: false,
       aaaLarge: false
     }
+  },
+  mounted () {
+    this.checkColorContrast(this.textColor, this.backgroundColor)
   },
   watch: {
     backgroundColor () {
