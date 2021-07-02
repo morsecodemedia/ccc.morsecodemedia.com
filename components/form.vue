@@ -55,7 +55,7 @@
               color="transparent"
             >
               <v-card-title>Contrast Ratio</v-card-title>
-              <v-card-subtitle class="contrast-ratio">{{ contrastRatio }}<span class="outof">/21</span></v-card-subtitle>
+              <p class="contrast-ratio">{{ contrastRatio }}<span class="outof">/21</span></p>
 
               <v-simple-table>
                 <thead>
@@ -156,6 +156,7 @@ export default {
 }
 .contrast-ratio {
   font-size: 24px;
+  padding-left: 15px;
 }
 .outof {
   font-size: 16px;
