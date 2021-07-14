@@ -18,20 +18,20 @@ export default {
   name: 'App',
   head () {
     return {
-      title: '',
+      title: 'Color Contrast Checker | a morsecodemedia tool',
       meta: [
-        { hid: 'ogtitle', property: 'og:title', content: '' },
-        { hid: 'twtitle', name: 'twitter:title', content: '' },
-        { hid: 'googlename', itemprop: 'name', content: '' },
-        { hid: 'description', name: 'description', content: '' },
-        { hid: 'ogdescription', property: 'og:description', content: '' },
-        { hid: 'twdescription', name: 'twitter:description', content: '' },
-        { hid: 'googledescription', itemprop: 'description', content: '' },
-        { hid: 'ogurl', property: 'og:url', content: 'https://www.domain.com/' + this.$route.path },
-        { hid: 'twsite', name: 'twitter:site', content: 'https://www.domain.com/' + this.$route.path }
+        { hid: 'ogtitle', property: 'og:title', content: 'Color Contrast Checker | a morsecodemedia tool' },
+        { hid: 'twtitle', name: 'twitter:title', content: 'Color Contrast Checker | a morsecodemedia tool' },
+        { hid: 'googlename', itemprop: 'name', content: 'Color Contrast Checker | a morsecodemedia tool' },
+        { hid: 'description', name: 'description', content: 'An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.' },
+        { hid: 'ogdescription', property: 'og:description', content: 'An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.' },
+        { hid: 'twdescription', name: 'twitter:description', content: 'An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.' },
+        { hid: 'googledescription', itemprop: 'description', content: 'An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.' },
+        { hid: 'ogurl', property: 'og:url', content: 'https://ccc.morsecodemedia.com' + this.$route.path },
+        { hid: 'twsite', name: 'twitter:site', content: 'https://ccc.morsecodemedia.com' + this.$route.path }
       ],
       link: [
-        { hid: 'canonical', rel: 'canonical', href: 'https://www.domain.com/' + this.$route.path }
+        { hid: 'canonical', rel: 'canonical', href: 'https://ccc.morsecodemedia.com' + this.$route.path }
       ]
     }
   }
