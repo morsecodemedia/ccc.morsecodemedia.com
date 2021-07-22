@@ -419,6 +419,7 @@
 </template>
 
 <script>
+import blinder from 'color-blind'
 import { colord, extend } from 'colord'
 import a11yPlugin from 'colord/plugins/a11y'
 extend([a11yPlugin])
@@ -500,24 +501,120 @@ export default {
       achromatopsiaAAALarge: false
     }
   },
-  mounted () {
-    this.checkColorContrast(this.textColor, this.backgroundColor)
-  },
   watch: {
     backgroundColor () {
       this.checkColorContrast(this.textColor, this.backgroundColor)
+      this.checkProtanomalyColorContrast(this.textColor, this.backgroundColor)
+      this.checkProtanopiaColorContrast(this.textColor, this.backgroundColor)
+      this.checkDeuteranomalyColorContrast(this.textColor, this.backgroundColor)
+      this.checkDeuteranopiaColorContrast(this.textColor, this.backgroundColor)
+      this.checkTritanomalyColorContrast(this.textColor, this.backgroundColor)
+      this.checkTritanopiaColorContrast(this.textColor, this.backgroundColor)
+      this.checkAchromatomalyColorContrast(this.textColor, this.backgroundColor)
+      this.checkAchromatopsiaColorContrast(this.textColor, this.backgroundColor)
     },
     textColor () {
       this.checkColorContrast(this.textColor, this.backgroundColor)
+      this.checkProtanomalyColorContrast(this.textColor, this.backgroundColor)
+      this.checkProtanopiaColorContrast(this.textColor, this.backgroundColor)
+      this.checkDeuteranomalyColorContrast(this.textColor, this.backgroundColor)
+      this.checkDeuteranopiaColorContrast(this.textColor, this.backgroundColor)
+      this.checkTritanomalyColorContrast(this.textColor, this.backgroundColor)
+      this.checkTritanopiaColorContrast(this.textColor, this.backgroundColor)
+      this.checkAchromatomalyColorContrast(this.textColor, this.backgroundColor)
+      this.checkAchromatopsiaColorContrast(this.textColor, this.backgroundColor)
     }
+  },
+  mounted () {
+    this.checkColorContrast(this.textColor, this.backgroundColor)
+    this.checkProtanomalyColorContrast(this.textColor, this.backgroundColor)
+    this.checkProtanopiaColorContrast(this.textColor, this.backgroundColor)
+    this.checkDeuteranomalyColorContrast(this.textColor, this.backgroundColor)
+    this.checkDeuteranopiaColorContrast(this.textColor, this.backgroundColor)
+    this.checkTritanomalyColorContrast(this.textColor, this.backgroundColor)
+    this.checkTritanopiaColorContrast(this.textColor, this.backgroundColor)
+    this.checkAchromatomalyColorContrast(this.textColor, this.backgroundColor)
+    this.checkAchromatopsiaColorContrast(this.textColor, this.backgroundColor)
   },
   methods: {
     checkColorContrast (txt, bg) {
-      this.contrastRatio = colord(txt).contrast(bg)
+      this.contrastRatio = colord(txt.slice(0, -2)).contrast(bg.slice(0, -2))
       this.aaNormal = this.contrastRatio >= 4.5
       this.aaLarge = this.contrastRatio >= 3
       this.aaaNormal = this.contrastRatio >= 7
       this.aaaLarge = this.contrastRatio >= 4.5
+    },
+    checkProtanomalyColorContrast (txt, bg) {
+      this.protanomalyBackgroundColor = blinder.protanomaly(bg.slice(0, -2))
+      this.protanomalyTextColor = blinder.protanomaly(txt.slice(0, -2))
+      this.protanomalyContrastRatio = colord(this.protanomalyTextColor).contrast(this.protanomalyBackgroundColor)
+      this.protanomalyAANormal = this.protanomalyContrastRatio >= 4.5
+      this.protanomalyAALarge = this.protanomalyContrastRatio >= 3
+      this.protanomalyAAANormal = this.protanomalyContrastRatio >= 7
+      this.protanomalyAAALarge = this.protanomalyContrastRatio >= 4.5
+    },
+    checkProtanopiaColorContrast (txt, bg) {
+      this.protanopiaBackgroundColor = blinder.protanopia(bg.slice(0, -2))
+      this.protanopiaTextColor = blinder.protanopia(txt.slice(0, -2))
+      this.protanopiaContrastRatio = colord(this.protanopiaTextColor).contrast(this.protanopiaBackgroundColor)
+      this.protanopiaAANormal = this.protanopiaContrastRatio >= 4.5
+      this.protanopiaAALarge = this.protanopiaContrastRatio >= 3
+      this.protanopiaAAANormal = this.protanopiaContrastRatio >= 7
+      this.protanopiaAAALarge = this.protanopiaContrastRatio >= 4.5
+    },
+    checkDeuteranomalyColorContrast (txt, bg) {
+      this.deuteranomalyBackgroundColor = blinder.deuteranomaly(bg.slice(0, -2))
+      this.deuteranomalyTextColor = blinder.deuteranomaly(txt.slice(0, -2))
+      this.deuteranomalyContrastRatio = colord(this.deuteranomalyTextColor).contrast(this.deuteranomalyBackgroundColor)
+      this.deuteranomalyAANormal = this.deuteranomalyContrastRatio >= 4.5
+      this.deuteranomalyAALarge = this.deuteranomalyContrastRatio >= 3
+      this.deuteranomalyAAANormal = this.deuteranomalyContrastRatio >= 7
+      this.deuteranomalyAAALarge = this.deuteranomalyContrastRatio >= 4.5
+    },
+    checkDeuteranopiaColorContrast (txt, bg) {
+      this.deuteranopiaBackgroundColor = blinder.deuteranopia(bg.slice(0, -2))
+      this.deuteranopiaTextColor = blinder.deuteranopia(txt.slice(0, -2))
+      this.deuteranopiaContrastRatio = colord(this.deuteranopiaTextColor).contrast(this.deuteranopiaBackgroundColor)
+      this.deuteranopiaAANormal = this.deuteranopiaContrastRatio >= 4.5
+      this.deuteranopiaAALarge = this.deuteranopiaContrastRatio >= 3
+      this.deuteranopiaAAANormal = this.deuteranopiaContrastRatio >= 7
+      this.deuteranopiaAAALarge = this.deuteranopiaContrastRatio >= 4.5
+    },
+    checkTritanomalyColorContrast (txt, bg) {
+      this.tritanomalyBackgroundColor = blinder.tritanomaly(bg.slice(0, -2))
+      this.tritanomalyTextColor = blinder.tritanomaly(txt.slice(0, -2))
+      this.tritanomalyContrastRatio = colord(this.tritanomalyTextColor).contrast(this.tritanomalyBackgroundColor)
+      this.tritanomalyAANormal = this.tritanomalyContrastRatio >= 4.5
+      this.tritanomalyAALarge = this.tritanomalyContrastRatio >= 3
+      this.tritanomalyAAANormal = this.tritanomalyContrastRatio >= 7
+      this.tritanomalyAAALarge = this.tritanomalyContrastRatio >= 4.5
+    },
+    checkTritanopiaColorContrast (txt, bg) {
+      this.tritanopiaBackgroundColor = blinder.tritanopia(bg.slice(0, -2))
+      this.tritanopiaTextColor = blinder.tritanopia(txt.slice(0, -2))
+      this.tritanopiaContrastRatio = colord(this.tritanopiaTextColor).contrast(this.tritanopiaBackgroundColor)
+      this.tritanopiaAANormal = this.tritanopiaContrastRatio >= 4.5
+      this.tritanopiaAALarge = this.tritanopiaContrastRatio >= 3
+      this.tritanopiaAAANormal = this.tritanopiaContrastRatio >= 7
+      this.tritanopiaAAALarge = this.tritanopiaContrastRatio >= 4.5
+    },
+    checkAchromatomalyColorContrast (txt, bg) {
+      this.achromatomalyBackgroundColor = blinder.achromatomaly(bg.slice(0, -2))
+      this.achromatomalyTextColor = blinder.achromatomaly(txt.slice(0, -2))
+      this.achromatomalyContrastRatio = colord(this.achromatomalyTextColor).contrast(this.achromatomalyBackgroundColor)
+      this.achromatomalyAANormal = this.achromatomalyContrastRatio >= 4.5
+      this.achromatomalyAALarge = this.achromatomalyContrastRatio >= 3
+      this.achromatomalyAAANormal = this.achromatomalyContrastRatio >= 7
+      this.achromatomalyAAALarge = this.achromatomalyContrastRatio >= 4.5
+    },
+    checkAchromatopsiaColorContrast (txt, bg) {
+      this.achromatopsiaBackgroundColor = blinder.achromatopsia(bg.slice(0, -2))
+      this.achromatopsiaTextColor = blinder.achromatopsia(txt.slice(0, -2))
+      this.achromatopsiaContrastRatio = colord(this.achromatopsiaTextColor).contrast(this.achromatopsiaBackgroundColor)
+      this.achromatopsiaAANormal = this.achromatopsiaContrastRatio >= 4.5
+      this.achromatopsiaAALarge = this.achromatopsiaContrastRatio >= 3
+      this.achromatopsiaAAANormal = this.achromatopsiaContrastRatio >= 7
+      this.achromatopsiaAAALarge = this.achromatopsiaContrastRatio >= 4.5
     }
   }
 }
