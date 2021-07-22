@@ -107,11 +107,11 @@
               <p class="contrast-ratio">
                 <span
                   class="color-preview"
-                  :style="{backgroundColor: backgroundColor, color: textColor}"
+                  :style="{backgroundColor: protanomalyBackgroundColor, color: protanomalyTextColor}"
                 >
                   Contrast Ratio
                 </span>
-                {{ contrastRatio }}<span class="outof">/21</span>
+                {{ protanomalyContrastRatio }}<span class="outof">/21</span>
               </p>
 
               <v-simple-table>
@@ -125,13 +125,13 @@
                 <tbody>
                   <tr>
                     <td class="noclass">AA</td>
-                    <td :class="{pass: aaNormal}">{{ (this.aaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaLarge}">{{ (this.aaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: protanomalyAANormal}">{{ (this.protanomalyAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: protanomalyAALarge}">{{ (this.protanomalyAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                   <tr>
                     <td class="noclass">AAA</td>
-                    <td :class="{pass: aaaNormal}">{{ (this.aaaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaaLarge}">{{ (this.aaaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: protanomalyAAANormal}">{{ (this.protanomalyAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: protanomalyAAALarge}">{{ (this.protanomalyAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -146,11 +146,11 @@
               <p class="contrast-ratio">
                 <span
                   class="color-preview"
-                  :style="{backgroundColor: backgroundColor, color: textColor}"
+                  :style="{backgroundColor: protanopiaBackgroundColor, color: protanopiaTextColor}"
                 >
                   Contrast Ratio
                 </span>
-                {{ contrastRatio }}<span class="outof">/21</span>
+                {{ protanopiaContrastRatio }}<span class="outof">/21</span>
               </p>
 
               <v-simple-table>
@@ -164,13 +164,13 @@
                 <tbody>
                   <tr>
                     <td class="noclass">AA</td>
-                    <td :class="{pass: aaNormal}">{{ (this.aaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaLarge}">{{ (this.aaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: protanopiaAANormal}">{{ (this.protanopiaAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: protanopiaAALarge}">{{ (this.protanopiaAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                   <tr>
                     <td class="noclass">AAA</td>
-                    <td :class="{pass: aaaNormal}">{{ (this.aaaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaaLarge}">{{ (this.aaaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: protanopiaAAANormal}">{{ (this.protanopiaAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: protanopiaAAALarge}">{{ (this.protanopiaAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -185,11 +185,11 @@
               <p class="contrast-ratio">
                 <span
                   class="color-preview"
-                  :style="{backgroundColor: backgroundColor, color: textColor}"
+                  :style="{backgroundColor: deuteranomalyBackgroundColor, color: deuteranomalyTextColor}"
                 >
                   Contrast Ratio
                 </span>
-                {{ contrastRatio }}<span class="outof">/21</span>
+                {{ deuteranomalyContrastRatio }}<span class="outof">/21</span>
               </p>
 
               <v-simple-table>
@@ -203,13 +203,13 @@
                 <tbody>
                   <tr>
                     <td class="noclass">AA</td>
-                    <td :class="{pass: aaNormal}">{{ (this.aaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaLarge}">{{ (this.aaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: deuteranomalyAANormal}">{{ (this.deuteranomalyAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: deuteranomalyAALarge}">{{ (this.deuteranomalyAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                   <tr>
                     <td class="noclass">AAA</td>
-                    <td :class="{pass: aaaNormal}">{{ (this.aaaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaaLarge}">{{ (this.aaaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: deuteranomalyAAANormal}">{{ (this.deuteranomalyAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: deuteranomalyAAALarge}">{{ (this.deuteranomalyAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -224,11 +224,11 @@
               <p class="contrast-ratio">
                 <span
                   class="color-preview"
-                  :style="{backgroundColor: backgroundColor, color: textColor}"
+                  :style="{backgroundColor: deuteranopiaBackgroundColor, color: deuteranopiaTextColor}"
                 >
                   Contrast Ratio
                 </span>
-                {{ contrastRatio }}<span class="outof">/21</span>
+                {{ deuteranopiaContrastRatio }}<span class="outof">/21</span>
               </p>
 
               <v-simple-table>
@@ -242,13 +242,13 @@
                 <tbody>
                   <tr>
                     <td class="noclass">AA</td>
-                    <td :class="{pass: aaNormal}">{{ (this.aaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaLarge}">{{ (this.aaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: deuteranopiaAANormal}">{{ (this.deuteranopiaAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: deuteranopiaAALarge}">{{ (this.deuteranopiaAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                   <tr>
                     <td class="noclass">AAA</td>
-                    <td :class="{pass: aaaNormal}">{{ (this.aaaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaaLarge}">{{ (this.aaaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: deuteranopiaAAANormal}">{{ (this.deuteranopiaAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: deuteranopiaAAALarge}">{{ (this.deuteranopiaAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -263,11 +263,11 @@
               <p class="contrast-ratio">
                 <span
                   class="color-preview"
-                  :style="{backgroundColor: backgroundColor, color: textColor}"
+                  :style="{backgroundColor: tritanomalyBackgroundColor, color: tritanomalyTextColor}"
                 >
                   Contrast Ratio
                 </span>
-                {{ contrastRatio }}<span class="outof">/21</span>
+                {{ tritanomalyContrastRatio }}<span class="outof">/21</span>
               </p>
 
               <v-simple-table>
@@ -281,13 +281,13 @@
                 <tbody>
                   <tr>
                     <td class="noclass">AA</td>
-                    <td :class="{pass: aaNormal}">{{ (this.aaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaLarge}">{{ (this.aaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: tritanomalyAANormal}">{{ (this.tritanomalyAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: tritanomalyAALarge}">{{ (this.tritanomalyAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                   <tr>
                     <td class="noclass">AAA</td>
-                    <td :class="{pass: aaaNormal}">{{ (this.aaaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaaLarge}">{{ (this.aaaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: tritanomalyAAANormal}">{{ (this.tritanomalyAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: tritanomalyAAALarge}">{{ (this.tritanomalyAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -302,11 +302,11 @@
               <p class="contrast-ratio">
                 <span
                   class="color-preview"
-                  :style="{backgroundColor: backgroundColor, color: textColor}"
+                  :style="{backgroundColor: tritanopiaBackgroundColor, color: tritanopiaTextColor}"
                 >
                   Contrast Ratio
                 </span>
-                {{ contrastRatio }}<span class="outof">/21</span>
+                {{ tritanopiaContrastRatio }}<span class="outof">/21</span>
               </p>
 
               <v-simple-table>
@@ -320,13 +320,13 @@
                 <tbody>
                   <tr>
                     <td class="noclass">AA</td>
-                    <td :class="{pass: aaNormal}">{{ (this.aaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaLarge}">{{ (this.aaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: tritanopiaAANormal}">{{ (this.tritanopiaAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: tritanopiaAALarge}">{{ (this.tritanopiaAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                   <tr>
                     <td class="noclass">AAA</td>
-                    <td :class="{pass: aaaNormal}">{{ (this.aaaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaaLarge}">{{ (this.aaaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: tritanopiaAAANormal}">{{ (this.tritanopiaAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: tritanopiaAAALarge}">{{ (this.tritanopiaAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -341,11 +341,11 @@
               <p class="contrast-ratio">
                 <span
                   class="color-preview"
-                  :style="{backgroundColor: backgroundColor, color: textColor}"
+                  :style="{backgroundColor: achromatomalyBackgroundColor, color: achromatomalyTextColor}"
                 >
                   Contrast Ratio
                 </span>
-                {{ contrastRatio }}<span class="outof">/21</span>
+                {{ achromatomalyContrastRatio }}<span class="outof">/21</span>
               </p>
 
               <v-simple-table>
@@ -359,13 +359,13 @@
                 <tbody>
                   <tr>
                     <td class="noclass">AA</td>
-                    <td :class="{pass: aaNormal}">{{ (this.aaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaLarge}">{{ (this.aaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: achromatomalyAANormal}">{{ (this.achromatomalyAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: achromatomalyAALarge}">{{ (this.achromatomalyAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                   <tr>
                     <td class="noclass">AAA</td>
-                    <td :class="{pass: aaaNormal}">{{ (this.aaaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaaLarge}">{{ (this.aaaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: achromatomalyAAANormal}">{{ (this.achromatomalyAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: achromatomalyAAALarge}">{{ (this.achromatomalyAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -380,11 +380,11 @@
               <p class="contrast-ratio">
                 <span
                   class="color-preview"
-                  :style="{backgroundColor: backgroundColor, color: textColor}"
+                  :style="{backgroundColor: achromatopsiaBackgroundColor, color: achromatopsiaTextColor}"
                 >
                   Contrast Ratio
                 </span>
-                {{ contrastRatio }}<span class="outof">/21</span>
+                {{ achromatopsiaContrastRatio }}<span class="outof">/21</span>
               </p>
 
               <v-simple-table>
@@ -398,134 +398,18 @@
                 <tbody>
                   <tr>
                     <td class="noclass">AA</td>
-                    <td :class="{pass: aaNormal}">{{ (this.aaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaLarge}">{{ (this.aaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: achromatopsiaAANormal}">{{ (this.achromatopsiaAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: achromatopsiaAALarge}">{{ (this.achromatopsiaAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                   <tr>
                     <td class="noclass">AAA</td>
-                    <td :class="{pass: aaaNormal}">{{ (this.aaaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaaLarge}">{{ (this.aaaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: achromatopsiaAAANormal}">{{ (this.achromatopsiaAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td :class="{pass: achromatopsiaAAALarge}">{{ (this.achromatopsiaAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
                   </tr>
                 </tbody>
               </v-simple-table>
             </v-card>
 
-            <!-- Cataracts -->
-            <v-card
-              color="transparent"
-            >
-              <v-card-title>Cataracts</v-card-title>
-              <v-card-subtitle>Clouding of the lens in the eye that affects vision</v-card-subtitle>
-              <p class="contrast-ratio">
-                <span
-                  class="color-preview"
-                  :style="{backgroundColor: backgroundColor, color: textColor}"
-                >
-                  Contrast Ratio
-                </span>
-                {{ contrastRatio }}<span class="outof">/21</span>
-              </p>
-
-              <v-simple-table>
-                <thead>
-                  <tr>
-                    <th>&nbsp;</th>
-                    <th>Normal Text</th>
-                    <th>Large Text</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="noclass">AA</td>
-                    <td :class="{pass: aaNormal}">{{ (this.aaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaLarge}">{{ (this.aaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
-                  </tr>
-                  <tr>
-                    <td class="noclass">AAA</td>
-                    <td :class="{pass: aaaNormal}">{{ (this.aaaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaaLarge}">{{ (this.aaaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
-                  </tr>
-                </tbody>
-              </v-simple-table>
-            </v-card>
-
-            <!-- Glaucoma -->
-            <v-card
-              color="transparent"
-            >
-              <v-card-title>Glaucoma</v-card-title>
-              <v-card-subtitle>Slight vision loss</v-card-subtitle>
-              <p class="contrast-ratio">
-                <span
-                  class="color-preview"
-                  :style="{backgroundColor: backgroundColor, color: textColor}"
-                >
-                  Contrast Ratio
-                </span>
-                {{ contrastRatio }}<span class="outof">/21</span>
-              </p>
-
-              <v-simple-table>
-                <thead>
-                  <tr>
-                    <th>&nbsp;</th>
-                    <th>Normal Text</th>
-                    <th>Large Text</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="noclass">AA</td>
-                    <td :class="{pass: aaNormal}">{{ (this.aaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaLarge}">{{ (this.aaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
-                  </tr>
-                  <tr>
-                    <td class="noclass">AAA</td>
-                    <td :class="{pass: aaaNormal}">{{ (this.aaaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaaLarge}">{{ (this.aaaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
-                  </tr>
-                </tbody>
-              </v-simple-table>
-            </v-card>
-
-            <!-- Low Vision -->
-            <v-card
-              color="transparent"
-            >
-              <v-card-title>Low Vision</v-card-title>
-              <v-card-subtitle>Decreased and/or blurry vision (not fixable by usual means such as glasses)</v-card-subtitle>
-              <p class="contrast-ratio">
-                <span
-                  class="color-preview"
-                  :style="{backgroundColor: backgroundColor, color: textColor}"
-                >
-                  Contrast Ratio
-                </span>
-                {{ contrastRatio }}<span class="outof">/21</span>
-              </p>
-
-              <v-simple-table>
-                <thead>
-                  <tr>
-                    <th>&nbsp;</th>
-                    <th>Normal Text</th>
-                    <th>Large Text</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="noclass">AA</td>
-                    <td :class="{pass: aaNormal}">{{ (this.aaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaLarge}">{{ (this.aaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
-                  </tr>
-                  <tr>
-                    <td class="noclass">AAA</td>
-                    <td :class="{pass: aaaNormal}">{{ (this.aaaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaaLarge}">{{ (this.aaaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
-                  </tr>
-                </tbody>
-              </v-simple-table>
-            </v-card>
           </v-col>
 
         </v-row>
@@ -549,7 +433,71 @@ export default {
       aaNormal: false,
       aaLarge: false,
       aaaNormal: false,
-      aaaLarge: false
+      aaaLarge: false,
+
+      protanomalyBackgroundColor: '',
+      protanomalyTextColor: '',
+      protanomalyContrastRatio: '',
+      protanomalyAANormal: false,
+      protanomalyAALarge: false,
+      protanomalyAAANormal: false,
+      protanomalyAAALarge: false,
+
+      protanopiaBackgroundColor: '',
+      protanopiaTextColor: '',
+      protanopiaContrastRatio: '',
+      protanopiaAANormal: false,
+      protanopiaAALarge: false,
+      protanopiaAAANormal: false,
+      protanopiaAAALarge: false,
+
+      deuteranomalyBackgroundColor: '',
+      deuteranomalyTextColor: '',
+      deuteranomalyContrastRatio: '',
+      deuteranomalyAANormal: false,
+      deuteranomalyAALarge: false,
+      deuteranomalyAAANormal: false,
+      deuteranomalyAAALarge: false,
+
+      deuteranopiaBackgroundColor: '',
+      deuteranopiaTextColor: '',
+      deuteranopiaContrastRatio: '',
+      deuteranopiaAANormal: false,
+      deuteranopiaAALarge: false,
+      deuteranopiaAAANormal: false,
+      deuteranopiaAAALarge: false,
+
+      tritanomalyBackgroundColor: '',
+      tritanomalyTextColor: '',
+      tritanomalyContrastRatio: '',
+      tritanomalyAANormal: false,
+      tritanomalyAALarge: false,
+      tritanomalyAAANormal: false,
+      tritanomalyAAALarge: false,
+
+      tritanopiaBackgroundColor: '',
+      tritanopiaTextColor: '',
+      tritanopiaContrastRatio: '',
+      tritanopiaAANormal: false,
+      tritanopiaAALarge: false,
+      tritanopiaAAANormal: false,
+      tritanopiaAAALarge: false,
+
+      achromatomalyBackgroundColor: '',
+      achromatomalyTextColor: '',
+      achromatomalyContrastRatio: '',
+      achromatomalyAANormal: false,
+      achromatomalyAALarge: false,
+      achromatomalyAAANormal: false,
+      achromatomalyAAALarge: false,
+
+      achromatopsiaBackgroundColor: '',
+      achromatopsiaTextColor: '',
+      achromatopsiaContrastRatio: '',
+      achromatopsiaAANormal: false,
+      achromatopsiaAALarge: false,
+      achromatopsiaAAANormal: false,
+      achromatopsiaAAALarge: false
     }
   },
   mounted () {
