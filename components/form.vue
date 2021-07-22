@@ -12,11 +12,19 @@
             :style="{backgroundColor: backgroundColor, color: textColor}"
             class="preview"
           >
-            <p class="large-text">Large Text - 24px</p>
-            <p class="large-text">Contrast ratio is a measure of the difference in perceived brightness between two colors. The higher the ratio, the better the contrast.</p>
+            <p class="large-text">
+              Large Text - 24px
+            </p>
+            <p class="large-text">
+              Contrast ratio is a measure of the difference in perceived brightness between two colors. The higher the ratio, the better the contrast.
+            </p>
 
-            <p class="normal-text">Normal Text - 16px</p>
-            <p class="normal-text">According to Web Content Accessibility Guidelines (WCAG) 2.0, text and images of text should have a minimum contrast ratio of 4.5:1 (Level AA), while large text should have minimum contrast ratio of 3:1. For enhanced contrast (Level AAA), normal text and large text should have minimum contrast ratio of 7:1 and 4.5:1 respectively.</p>
+            <p class="normal-text">
+              Normal Text - 16px
+            </p>
+            <p class="normal-text">
+              According to Web Content Accessibility Guidelines (WCAG) 2.0, text and images of text should have a minimum contrast ratio of 4.5:1 (Level AA), while large text should have minimum contrast ratio of 3:1. For enhanced contrast (Level AAA), normal text and large text should have minimum contrast ratio of 7:1 and 4.5:1 respectively.
+            </p>
           </v-card>
         </v-row>
         <v-row>
@@ -85,14 +93,26 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="noclass">AA</td>
-                    <td :class="{pass: aaNormal}">{{ (this.aaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaLarge}">{{ (this.aaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AA
+                    </td>
+                    <td :class="{pass: aaNormal}">
+                      {{ (aaNormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: aaLarge}">
+                      {{ (aaLarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                   <tr>
-                    <td class="noclass">AAA</td>
-                    <td :class="{pass: aaaNormal}">{{ (this.aaaNormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: aaaLarge}">{{ (this.aaaLarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AAA
+                    </td>
+                    <td :class="{pass: aaaNormal}">
+                      {{ (aaaNormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: aaaLarge}">
+                      {{ (aaaLarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -124,14 +144,26 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="noclass">AA</td>
-                    <td :class="{pass: protanomalyAANormal}">{{ (this.protanomalyAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: protanomalyAALarge}">{{ (this.protanomalyAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AA
+                    </td>
+                    <td :class="{pass: protanomalyAANormal}">
+                      {{ (protanomalyAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: protanomalyAALarge}">
+                      {{ (protanomalyAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                   <tr>
-                    <td class="noclass">AAA</td>
-                    <td :class="{pass: protanomalyAAANormal}">{{ (this.protanomalyAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: protanomalyAAALarge}">{{ (this.protanomalyAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AAA
+                    </td>
+                    <td :class="{pass: protanomalyAAANormal}">
+                      {{ (protanomalyAAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: protanomalyAAALarge}">
+                      {{ (protanomalyAAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -163,14 +195,26 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="noclass">AA</td>
-                    <td :class="{pass: protanopiaAANormal}">{{ (this.protanopiaAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: protanopiaAALarge}">{{ (this.protanopiaAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AA
+                    </td>
+                    <td :class="{pass: protanopiaAANormal}">
+                      {{ (protanopiaAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: protanopiaAALarge}">
+                      {{ (protanopiaAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                   <tr>
-                    <td class="noclass">AAA</td>
-                    <td :class="{pass: protanopiaAAANormal}">{{ (this.protanopiaAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: protanopiaAAALarge}">{{ (this.protanopiaAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AAA
+                    </td>
+                    <td :class="{pass: protanopiaAAANormal}">
+                      {{ (protanopiaAAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: protanopiaAAALarge}">
+                      {{ (protanopiaAAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -202,14 +246,26 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="noclass">AA</td>
-                    <td :class="{pass: deuteranomalyAANormal}">{{ (this.deuteranomalyAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: deuteranomalyAALarge}">{{ (this.deuteranomalyAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AA
+                    </td>
+                    <td :class="{pass: deuteranomalyAANormal}">
+                      {{ (deuteranomalyAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: deuteranomalyAALarge}">
+                      {{ (deuteranomalyAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                   <tr>
-                    <td class="noclass">AAA</td>
-                    <td :class="{pass: deuteranomalyAAANormal}">{{ (this.deuteranomalyAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: deuteranomalyAAALarge}">{{ (this.deuteranomalyAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AAA
+                    </td>
+                    <td :class="{pass: deuteranomalyAAANormal}">
+                      {{ (deuteranomalyAAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: deuteranomalyAAALarge}">
+                      {{ (deuteranomalyAAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -241,14 +297,26 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="noclass">AA</td>
-                    <td :class="{pass: deuteranopiaAANormal}">{{ (this.deuteranopiaAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: deuteranopiaAALarge}">{{ (this.deuteranopiaAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AA
+                    </td>
+                    <td :class="{pass: deuteranopiaAANormal}">
+                      {{ (deuteranopiaAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: deuteranopiaAALarge}">
+                      {{ (deuteranopiaAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                   <tr>
-                    <td class="noclass">AAA</td>
-                    <td :class="{pass: deuteranopiaAAANormal}">{{ (this.deuteranopiaAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: deuteranopiaAAALarge}">{{ (this.deuteranopiaAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AAA
+                    </td>
+                    <td :class="{pass: deuteranopiaAAANormal}">
+                      {{ (deuteranopiaAAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: deuteranopiaAAALarge}">
+                      {{ (deuteranopiaAAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -280,14 +348,26 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="noclass">AA</td>
-                    <td :class="{pass: tritanomalyAANormal}">{{ (this.tritanomalyAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: tritanomalyAALarge}">{{ (this.tritanomalyAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AA
+                    </td>
+                    <td :class="{pass: tritanomalyAANormal}">
+                      {{ (tritanomalyAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: tritanomalyAALarge}">
+                      {{ (tritanomalyAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                   <tr>
-                    <td class="noclass">AAA</td>
-                    <td :class="{pass: tritanomalyAAANormal}">{{ (this.tritanomalyAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: tritanomalyAAALarge}">{{ (this.tritanomalyAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AAA
+                    </td>
+                    <td :class="{pass: tritanomalyAAANormal}">
+                      {{ (tritanomalyAAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: tritanomalyAAALarge}">
+                      {{ (tritanomalyAAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -319,14 +399,26 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="noclass">AA</td>
-                    <td :class="{pass: tritanopiaAANormal}">{{ (this.tritanopiaAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: tritanopiaAALarge}">{{ (this.tritanopiaAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AA
+                    </td>
+                    <td :class="{pass: tritanopiaAANormal}">
+                      {{ (tritanopiaAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: tritanopiaAALarge}">
+                      {{ (tritanopiaAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                   <tr>
-                    <td class="noclass">AAA</td>
-                    <td :class="{pass: tritanopiaAAANormal}">{{ (this.tritanopiaAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: tritanopiaAAALarge}">{{ (this.tritanopiaAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AAA
+                    </td>
+                    <td :class="{pass: tritanopiaAAANormal}">
+                      {{ (tritanopiaAAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: tritanopiaAAALarge}">
+                      {{ (tritanopiaAAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -358,14 +450,26 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="noclass">AA</td>
-                    <td :class="{pass: achromatomalyAANormal}">{{ (this.achromatomalyAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: achromatomalyAALarge}">{{ (this.achromatomalyAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AA
+                    </td>
+                    <td :class="{pass: achromatomalyAANormal}">
+                      {{ (achromatomalyAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: achromatomalyAALarge}">
+                      {{ (achromatomalyAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                   <tr>
-                    <td class="noclass">AAA</td>
-                    <td :class="{pass: achromatomalyAAANormal}">{{ (this.achromatomalyAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: achromatomalyAAALarge}">{{ (this.achromatomalyAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AAA
+                    </td>
+                    <td :class="{pass: achromatomalyAAANormal}">
+                      {{ (achromatomalyAAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: achromatomalyAAALarge}">
+                      {{ (achromatomalyAAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                 </tbody>
               </v-simple-table>
@@ -397,21 +501,31 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="noclass">AA</td>
-                    <td :class="{pass: achromatopsiaAANormal}">{{ (this.achromatopsiaAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: achromatopsiaAALarge}">{{ (this.achromatopsiaAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AA
+                    </td>
+                    <td :class="{pass: achromatopsiaAANormal}">
+                      {{ (achromatopsiaAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: achromatopsiaAALarge}">
+                      {{ (achromatopsiaAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                   <tr>
-                    <td class="noclass">AAA</td>
-                    <td :class="{pass: achromatopsiaAAANormal}">{{ (this.achromatopsiaAAANormal) ? '✓ PASS' : '✗ FAIL' }}</td>
-                    <td :class="{pass: achromatopsiaAAALarge}">{{ (this.achromatopsiaAAALarge) ? '✓ PASS' : '✗ FAIL' }}</td>
+                    <td class="noclass">
+                      AAA
+                    </td>
+                    <td :class="{pass: achromatopsiaAAANormal}">
+                      {{ (achromatopsiaAAANormal) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
+                    <td :class="{pass: achromatopsiaAAALarge}">
+                      {{ (achromatopsiaAAALarge) ? '✓ PASS' : '✗ FAIL' }}
+                    </td>
                   </tr>
                 </tbody>
               </v-simple-table>
             </v-card>
-
           </v-col>
-
         </v-row>
       </v-container>
     </v-card>
