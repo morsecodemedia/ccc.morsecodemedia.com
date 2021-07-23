@@ -29,7 +29,8 @@
         </v-row>
         <v-row>
           <v-col
-            cols="6"
+            md="6"
+            sm="12"
           >
             <v-card
               color="transparent"
@@ -65,7 +66,8 @@
           </v-col>
 
           <v-col
-            cols="6"
+            md="6"
+            sm="12"
           >
             <!-- Regular Vision -->
             <v-card
