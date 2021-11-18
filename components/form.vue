@@ -82,7 +82,7 @@
                 >
                   Contrast Ratio
                 </span>
-                {{ contrastRatio }}<span class="outof">/21</span>
+                {{ contrastRatio }}<span class="outof">:1</span>
               </p>
 
               <v-simple-table>
@@ -133,7 +133,7 @@
                 >
                   Contrast Ratio
                 </span>
-                {{ protanomalyContrastRatio }}<span class="outof">/21</span>
+                {{ protanomalyContrastRatio }}<span class="outof">:1</span>
               </p>
 
               <v-simple-table>
@@ -184,7 +184,7 @@
                 >
                   Contrast Ratio
                 </span>
-                {{ protanopiaContrastRatio }}<span class="outof">/21</span>
+                {{ protanopiaContrastRatio }}<span class="outof">:1</span>
               </p>
 
               <v-simple-table>
@@ -235,7 +235,7 @@
                 >
                   Contrast Ratio
                 </span>
-                {{ deuteranomalyContrastRatio }}<span class="outof">/21</span>
+                {{ deuteranomalyContrastRatio }}<span class="outof">:1</span>
               </p>
 
               <v-simple-table>
@@ -286,7 +286,7 @@
                 >
                   Contrast Ratio
                 </span>
-                {{ deuteranopiaContrastRatio }}<span class="outof">/21</span>
+                {{ deuteranopiaContrastRatio }}<span class="outof">:1</span>
               </p>
 
               <v-simple-table>
@@ -337,7 +337,7 @@
                 >
                   Contrast Ratio
                 </span>
-                {{ tritanomalyContrastRatio }}<span class="outof">/21</span>
+                {{ tritanomalyContrastRatio }}<span class="outof">:1</span>
               </p>
 
               <v-simple-table>
@@ -388,7 +388,7 @@
                 >
                   Contrast Ratio
                 </span>
-                {{ tritanopiaContrastRatio }}<span class="outof">/21</span>
+                {{ tritanopiaContrastRatio }}<span class="outof">:1</span>
               </p>
 
               <v-simple-table>
@@ -439,7 +439,7 @@
                 >
                   Contrast Ratio
                 </span>
-                {{ achromatomalyContrastRatio }}<span class="outof">/21</span>
+                {{ achromatomalyContrastRatio }}<span class="outof">:1</span>
               </p>
 
               <v-simple-table>
@@ -490,7 +490,7 @@
                 >
                   Contrast Ratio
                 </span>
-                {{ achromatopsiaContrastRatio }}<span class="outof">/21</span>
+                {{ achromatopsiaContrastRatio }}<span class="outof">:1</span>
               </p>
 
               <v-simple-table>
