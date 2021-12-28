@@ -1,15 +1,16 @@
 {
   "name": "ccc.morsecodemedia.com",
   "version": "2.1.2",
-  "description": "A template to start Nuxt projects, loaded with all the additional modules that are used in almost all of our projects.",
-  "author": "Brandon Morse (brandon@morsecodemedia.com)",
-  "contributors": [
-    {
-      "name": "Brandon Morse",
-      "email": "brandon@morsecodemedia.com",
-      "url": "https://github.com/morsecodemedia"
-    }
-  ],
+  "description": "Color Contrast Checker - An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.",
+  "author": "brandonmorse <brandon@morsecodemedia.com> (https://www.morsecodemedia.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morsecodemedia/ccc.morsecodemedia.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/morsecodemedia/ccc.morsecodemedia.com/issues"
+  },
+  "homepage": "https://github.com/morsecodemedia/ccc.morsecodemedia.com/blob/master/README.md",
   "private": true,
   "scripts": {
     "dev": "nuxt",
