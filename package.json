@@ -1,18 +1,13 @@
 {
-  "name": "nuxt-template",
-  "version": "1.0.0",
+  "name": "ccc.morsecodemedia.com",
+  "version": "2.1.2",
   "description": "A template to start Nuxt projects, loaded with all the additional modules that are used in almost all of our projects.",
-  "author": "A morsecodemedia/tomasino project",
+  "author": "Brandon Morse (brandon@morsecodemedia.com)",
   "contributors": [
     {
       "name": "Brandon Morse",
       "email": "brandon@morsecodemedia.com",
       "url": "https://github.com/morsecodemedia"
-    },
-    {
-      "name": "James Tomasino",
-      "email": "james@tomasino.org",
-      "url": "https://github.com/jamestomasino"
     }
   ],
   "private": true,
