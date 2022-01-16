@@ -544,13 +544,15 @@ export default {
   name: 'Form',
   data () {
     return {
-      backgroundColor: '#985895FF',
-      textColor: '#FCF49FFF',
+      backgroundColor: '',
+      textColor: '',
       contrastRatio: '',
       aaNormal: false,
       aaLarge: false,
       aaaNormal: false,
       aaaLarge: false,
+      bq: false,
+      tq: false,
 
       protanomalyBackgroundColor: '',
       protanomalyTextColor: '',
@@ -651,6 +653,86 @@ export default {
     this.checkTritanopiaColorContrast(this.textColor, this.backgroundColor)
     this.checkAchromatomalyColorContrast(this.textColor, this.backgroundColor)
     this.checkAchromatopsiaColorContrast(this.textColor, this.backgroundColor)
+    if (process.browser) {
+      if (this.getParameterByName('t')) {
+        const hex = this.getParameterByName('t')
+        const len = hex.length
+        this.textColor = this.processHex(hex, len)
+        this.tq = true
+      }
+      if (this.getParameterByName('tc')) {
+        const hex = this.getParameterByName('tc')
+        const len = hex.length
+        this.textColor = this.processHex(hex, len)
+        this.tq = true
+      }
+      if (this.getParameterByName('txt')) {
+        const hex = this.getParameterByName('txt')
+        const len = hex.length
+        this.textColor = this.processHex(hex, len)
+        this.tq = true
+      }
+      if (this.getParameterByName('text')) {
+        const hex = this.getParameterByName('text')
+        const len = hex.length
+        this.textColor = this.processHex(hex, len)
+        this.tq = true
+      }
+      if (this.getParameterByName('txtColor')) {
+        const hex = this.getParameterByName('txtColor')
+        const len = hex.length
+        this.textColor = this.processHex(hex, len)
+        this.tq = true
+      }
+      if (this.getParameterByName('textColor')) {
+        const hex = this.getParameterByName('textColor')
+        const len = hex.length
+        this.textColor = this.processHex(hex, len)
+        this.tq = true
+      }
+      if (this.getParameterByName('b')) {
+        const hex = this.getParameterByName('b')
+        const len = hex.length
+        this.backgroundColor = this.processHex(hex, len)
+        this.bq = true
+      }
+      if (this.getParameterByName('bc')) {
+        const hex = this.getParameterByName('bc')
+        const len = hex.length
+        this.backgroundColor = this.processHex(hex, len)
+        this.bq = true
+      }
+      if (this.getParameterByName('bg')) {
+        const hex = this.getParameterByName('bg')
+        const len = hex.length
+        this.backgroundColor = this.processHex(hex, len)
+        this.bq = true
+      }
+      if (this.getParameterByName('background')) {
+        const hex = this.getParameterByName('background')
+        const len = hex.length
+        this.backgroundColor = this.processHex(hex, len)
+        this.bq = true
+      }
+      if (this.getParameterByName('bgColor')) {
+        const hex = this.getParameterByName('bgColor')
+        const len = hex.length
+        this.backgroundColor = this.processHex(hex, len)
+        this.bq = true
+      }
+      if (this.getParameterByName('backgroundColor')) {
+        const hex = this.getParameterByName('backgroundColor')
+        const len = hex.length
+        this.backgroundColor = this.processHex(hex, len)
+        this.bq = true
+      }
+      if (!this.tq) {
+        this.textColor = '#FCF49FFF'
+      }
+      if (!this.bq) {
+        this.backgroundColor = '#985895FF'
+      }
+    }
   },
   methods: {
     checkColorContrast (txt, bg) {
@@ -731,6 +813,42 @@ export default {
       this.achromatopsiaAALarge = this.achromatopsiaContrastRatio >= 3
       this.achromatopsiaAAANormal = this.achromatopsiaContrastRatio >= 7
       this.achromatopsiaAAALarge = this.achromatopsiaContrastRatio >= 4.5
+    },
+    getParameterByName (name, url) {
+      if (process.browser) {
+        if (!url) {
+          url = window.location.href
+        }
+        name = name.replace(/[[\]]/g, '\\$&')
+        const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
+        const results = regex.exec(url)
+        if (!results) {
+          return null
+        }
+        if (!results[2]) {
+          return ''
+        }
+        return decodeURIComponent(results[2].replace(/\+/g, ' '))
+      }
+    },
+    processHex (hex, length) {
+      if (length === 3) {
+        hex = hex.split('').map(function (h) {
+          return h + h
+        }).join('')
+        return hex.toUpperCase() + 'FF'
+      }
+      if (length === 6) {
+        return hex.toUpperCase() + 'FF'
+      }
+      if (length === 8) {
+        return hex.toUpperCase()
+      }
+    },
+    upperCaseParameter (value) {
+      if (value.length > 0) {
+        return value.toUpperCase()
+      }
     }
   }
 }
