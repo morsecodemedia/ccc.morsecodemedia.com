@@ -50,8 +50,12 @@ export default {
   modules: [
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    '@nuxtjs/redirect-module'
+    '@nuxtjs/redirect-module',
+    '@nuxtjs/gtm'
   ],
+  gtm: {
+    id: 'GTM-5PDFGXR'
+  },
   sitemap: {
     hostname: 'https://ccc.morsecodemedia.com',
     gzip: true,
