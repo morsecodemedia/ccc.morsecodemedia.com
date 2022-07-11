@@ -13,7 +13,7 @@
             class="preview"
           >
             <p class="large-text">
-              Large Text - 24px
+              Large Text - 19px bold or 24px regular
             </p>
             <p class="large-text">
               Contrast ratio is a measure of the difference in perceived brightness between two colors. The higher the ratio, the better the contrast.
@@ -23,7 +23,7 @@
               Normal Text - 16px
             </p>
             <p class="normal-text">
-              According to Web Content Accessibility Guidelines (WCAG) 2.0, text and images of text should have a minimum contrast ratio of 4.5:1 (Level AA), while large text should have minimum contrast ratio of 3:1. For enhanced contrast (Level AAA), normal text and large text should have minimum contrast ratio of 7:1 and 4.5:1 respectively.
+              According to Web Content Accessibility Guidelines (WCAG), text and images of text should have a minimum contrast ratio of 4.5:1 (Level AA), while large text should have minimum contrast ratio of 3:1. For enhanced contrast (Level AAA), normal text and large text should have minimum contrast ratio of 7:1 and 4.5:1 respectively.
             </p>
           </v-card>
         </v-row>
