@@ -13,7 +13,7 @@
             class="preview"
           >
             <p class="large-text">
-              Large Text - 19px bold or 24px regular
+              Large Text - <span class="lg-bold">19px bold</span> or 24px regular
             </p>
             <p class="large-text">
               Contrast ratio is a measure of the difference in perceived brightness between two colors. The higher the ratio, the better the contrast.
@@ -870,6 +870,13 @@ h1 {
   font-size: 24px;
   line-height: 1.2em;
 }
+
+.large-text .lg-bold {
+  font-size: 19px;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
 .normal-text {
   font-size: 16px;
   line-height: 1.2em;
