@@ -1,13 +1,18 @@
 <template>
-  <Form />
+  <div>
+    <Colors />
+    <Form />
+  </div>
 </template>
 
 <script>
+import Colors from '~/components/colors.vue'
 import Form from '~/components/form.vue'
 export default {
   name: 'Homepage',
   components: {
-    Form
+    Form,
+    Colors
   },
   head () {
     return {
