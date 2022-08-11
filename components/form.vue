@@ -63,6 +63,16 @@
                 </v-row>
               </v-card-text>
             </v-card>
+
+            <v-card>
+              <v-card-title>Share Contrast Link</v-card-title>
+              <v-card-subtitle>One-click create and save a sharable URL to allow you to come back to this page with the current colors prepopulated.</v-card-subtitle>
+              <v-btn
+                @click="createURL"
+              >
+                Create Sharable URL
+              </v-btn>
+            </v-card>
           </v-col>
 
           <v-col
@@ -535,9 +545,13 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import blinder from 'color-blind'
 import { colord, extend } from 'colord'
 import a11yPlugin from 'colord/plugins/a11y'
+import VueClipboard from 'vue-clipboard2'
+
+Vue.use(VueClipboard)
 extend([a11yPlugin])
 
 export default {
@@ -735,6 +749,20 @@ export default {
     }
   },
   methods: {
+    createURL () {
+      const txtHex = this.textColor.substring(1)
+      const bgHex = this.backgroundColor.substring(1)
+      const txtLen = txtHex.length
+      const bgLen = bgHex.length
+      const txtParam = this.processHex(txtHex, txtLen)
+      const bgParam = this.processHex(bgHex, bgLen)
+      const generatedURL = 'https://ccc.morsecodemedia.com/?textColor=' + txtParam + '&backgroundColor=' + bgParam
+      this.$copyText(generatedURL).then(function (e) {
+        alert('The generated URL has been copied to your clipboard.')
+      }, function (e) {
+        alert('Something went wrong while trying to copy the generated URL.')
+      })
+    },
     checkColorContrast (txt, bg) {
       this.contrastRatio = colord(txt.slice(0, -2)).contrast(bg.slice(0, -2))
       this.aaNormal = this.contrastRatio >= 4.5
