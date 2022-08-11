@@ -1,6 +1,6 @@
 {
   "name": "ccc.morsecodemedia.com",
-  "version": "2.1.5",
+  "version": "2.2.0",
   "description": "Color Contrast Checker - An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.",
   "author": "brandonmorse <brandon@morsecodemedia.com> (https://www.morsecodemedia.com)",
   "repository": {
