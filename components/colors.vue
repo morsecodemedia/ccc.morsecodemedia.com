@@ -1,12 +1,13 @@
 <template>
   <div class="color-container">
     <div class="color-1">
-      <p>Text Color</p>
+      <label for="color1">Text Color</label>
       <input
         id="color1"
         v-model="textColor"
         type="color"
       >
+      <label for="hex1">Hex:</label>
       <input
         id="hex1"
         v-model="textColor"
@@ -14,12 +15,13 @@
       >
     </div>
     <div class="color-2">
-      <p>Background Color</p>
+      <label for="color2">Background Color</label>
       <input
         id="color2"
         v-model="backgroundColor"
         type="color"
       >
+      <label for="hex2">Hex:</label>
       <input
         id="hex2"
         v-model="backgroundColor"

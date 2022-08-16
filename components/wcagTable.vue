@@ -106,7 +106,7 @@ export default {
       }
     }
     td {
-      color: red;
+      color: #D10000;
       &.noclass {
         color: unset;
       }
