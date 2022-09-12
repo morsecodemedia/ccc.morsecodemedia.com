@@ -1,7 +1,7 @@
 <template>
   <div
     class="contrast-container"
-    :style="{backgroundColor: backgroundColor, color: textColor}"
+    :style="{backgroundColor: bgColor, color: txtColor}"
   >
     <p class="contrast-ratio">
       {{ contrastRatio }}:1
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
 import { colord, extend } from 'colord'
 import a11yPlugin from 'colord/plugins/a11y'
 
@@ -19,27 +20,46 @@ export default {
   name: 'ContrastRatio',
   data () {
     return {
-      textColor: '',
-      backgroundColor: '',
-      contrastRatio: '',
       aaNormal: false,
       aaLarge: false,
       aaaNormal: false,
-      aaaLarge: false
+      aaaLarge: false,
+      contrastRatio: ''
+    }
+  },
+  computed: {
+    ...mapGetters('colors', ['backgroundColorStore', 'textColorStore']),
+    bgColor () {
+      return this.$store.state.colors.backgroundColorStore
+    },
+    txtColor () {
+      return this.$store.state.colors.textColorStore
+    }
+  },
+  watch: {
+    bgColor () {
+      this.checkColorContrast(this.txtColor, this.bgColor)
+    },
+    txtColor () {
+      this.checkColorContrast(this.txtColor, this.bgColor)
     }
   },
   mounted () {
-    this.textColor = '#FCF49F'
-    this.backgroundColor = '#985895'
-    this.checkColorContrast(this.textColor, this.backgroundColor)
+    this.loadBgColor()
+    this.loadTxtColor()
   },
   methods: {
+    ...mapMutations('colors', ['setBgColorStore', 'setTxtColorStore']),
     checkColorContrast (txt, bg) {
       this.contrastRatio = colord(txt).contrast(bg)
-      this.aaNormal = this.contrastRatio >= 4.5
-      this.aaLarge = this.contrastRatio >= 3
-      this.aaaNormal = this.contrastRatio >= 7
-      this.aaaLarge = this.contrastRatio >= 4.5
+    },
+    loadBgColor () {
+      this.bgColor = this.$store.state.colors.backgroundColorStore
+      this.checkColorContrast(this.txtColor, this.bgColor)
+    },
+    loadTxtColor () {
+      this.txtColor = this.$store.state.colors.textColorStore
+      this.checkColorContrast(this.txtColor, this.bgColor)
     }
   }
 }

@@ -4,161 +4,67 @@
       <label for="color1">Text Color</label>
       <input
         id="color1"
-        v-model="textColor"
+        v-model="txtColor"
         type="color"
+        @change="updateTxtColor"
       >
       <label for="hex1">Hex:</label>
       <input
         id="hex1"
-        v-model="textColor"
+        v-model="txtColor"
         type="text"
+        @change="updateTxtColor"
       >
     </div>
     <div class="color-2">
       <label for="color2">Background Color</label>
       <input
         id="color2"
-        v-model="backgroundColor"
+        v-model="bgColor"
         type="color"
+        @change="updateBgColor"
       >
       <label for="hex2">Hex:</label>
       <input
         id="hex2"
-        v-model="backgroundColor"
+        v-model="bgColor"
         type="text"
+        @change="updateBgColor"
       >
     </div>
   </div>
 </template>
 
 <script>
-
+import { mapGetters, mapMutations } from 'vuex'
 export default {
   name: 'Colors',
   data () {
     return {
-      backgroundColor: '',
-      textColor: ''
+      bgColor: '',
+      txtColor: ''
     }
+  },
+  computed: {
+    ...mapGetters('colors', ['backgroundColorStore', 'textColorStore'])
   },
   mounted () {
-    if (process.browser) {
-      if (this.getParameterByName('t')) {
-        const hex = this.getParameterByName('t')
-        const len = hex.length
-        this.textColor = this.processHex(hex, len)
-        this.tq = true
-      }
-      if (this.getParameterByName('tc')) {
-        const hex = this.getParameterByName('tc')
-        const len = hex.length
-        this.textColor = this.processHex(hex, len)
-        this.tq = true
-      }
-      if (this.getParameterByName('txt')) {
-        const hex = this.getParameterByName('txt')
-        const len = hex.length
-        this.textColor = this.processHex(hex, len)
-        this.tq = true
-      }
-      if (this.getParameterByName('text')) {
-        const hex = this.getParameterByName('text')
-        const len = hex.length
-        this.textColor = this.processHex(hex, len)
-        this.tq = true
-      }
-      if (this.getParameterByName('txtColor')) {
-        const hex = this.getParameterByName('txtColor')
-        const len = hex.length
-        this.textColor = this.processHex(hex, len)
-        this.tq = true
-      }
-      if (this.getParameterByName('textColor')) {
-        const hex = this.getParameterByName('textColor')
-        const len = hex.length
-        this.textColor = this.processHex(hex, len)
-        this.tq = true
-      }
-      if (this.getParameterByName('b')) {
-        const hex = this.getParameterByName('b')
-        const len = hex.length
-        this.backgroundColor = this.processHex(hex, len)
-        this.bq = true
-      }
-      if (this.getParameterByName('bc')) {
-        const hex = this.getParameterByName('bc')
-        const len = hex.length
-        this.backgroundColor = this.processHex(hex, len)
-        this.bq = true
-      }
-      if (this.getParameterByName('bg')) {
-        const hex = this.getParameterByName('bg')
-        const len = hex.length
-        this.backgroundColor = this.processHex(hex, len)
-        this.bq = true
-      }
-      if (this.getParameterByName('background')) {
-        const hex = this.getParameterByName('background')
-        const len = hex.length
-        this.backgroundColor = this.processHex(hex, len)
-        this.bq = true
-      }
-      if (this.getParameterByName('bgColor')) {
-        const hex = this.getParameterByName('bgColor')
-        const len = hex.length
-        this.backgroundColor = this.processHex(hex, len)
-        this.bq = true
-      }
-      if (this.getParameterByName('backgroundColor')) {
-        const hex = this.getParameterByName('backgroundColor')
-        const len = hex.length
-        this.backgroundColor = this.processHex(hex, len)
-        this.bq = true
-      }
-      if (!this.tq) {
-        this.textColor = '#FCF49F'
-      }
-      if (!this.bq) {
-        this.backgroundColor = '#985895'
-      }
-    }
+    this.loadBgColor()
+    this.loadTxtColor()
   },
   methods: {
-    getParameterByName (name, url) {
-      if (process.browser) {
-        if (!url) {
-          url = window.location.href
-        }
-        name = name.replace(/[[\]]/g, '\\$&')
-        const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)')
-        const results = regex.exec(url)
-        if (!results) {
-          return null
-        }
-        if (!results[2]) {
-          return ''
-        }
-        return decodeURIComponent(results[2].replace(/\+/g, ' '))
-      }
+    ...mapMutations('colors', ['setBgColorStore', 'setTxtColorStore']),
+    loadBgColor () {
+      this.bgColor = this.$store.state.colors.backgroundColorStore
     },
-    processHex (hex, length) {
-      if (length === 3) {
-        hex = hex.split('').map(function (h) {
-          return h + h
-        }).join('')
-        return hex.toUpperCase()
-      }
-      if (length === 6) {
-        return hex.toUpperCase()
-      }
-      if (length === 8) {
-        return hex.toUpperCase()
-      }
+    loadTxtColor () {
+      this.txtColor = this.$store.state.colors.textColorStore
     },
-    upperCaseParameter (value) {
-      if (value.length > 0) {
-        return value.toUpperCase()
-      }
+    updateBgColor () {
+      this.setBgColorStore(this.bgColor)
+    },
+    updateTxtColor () {
+      this.setTxtColorStore(this.txtColor)
     }
   }
 }
