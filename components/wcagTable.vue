@@ -1,7 +1,7 @@
 <template>
   <div class="wcag-container">
     <div class="normal">
-      <button>
+      <button @click="$toggleModal(modalNormalText)">
         Normal Text
         <span>i</span>
       </button>
@@ -21,7 +21,7 @@
       </table>
     </div>
     <div class="large">
-      <button>
+      <button @click="$toggleModal(modalLargeText)">
         Large text
         <span>i</span>
       </button>

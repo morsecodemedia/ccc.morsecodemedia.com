@@ -36,7 +36,12 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/vuetify'],
+  plugins: [
+    '~/plugins/vuetify',
+    { mode: 'client', src: '~/plugins/focus-trap.js' },
+    { mode: 'client', src: '~/plugins/modals.js' },
+    { mode: 'client', src: '~/plugins/vh.js' }
+  ],
   /*
   ** Nuxt.js dev-modules
   */
