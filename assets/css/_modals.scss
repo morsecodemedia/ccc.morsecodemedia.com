@@ -5,7 +5,7 @@
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 0.4s, opacity 0.4s linear;
-    background: transparent linear-gradient(125deg, var(--white) 0%, var(--black) 100%) 0% 0% no-repeat padding-box;
+    background: var(--grey);
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
     position: fixed;
@@ -26,9 +26,9 @@
         width: 100%;
         margin: auto;
         border-radius: 14px;
-        background-color: transparent;
+        background-color: var(--white);
         border: 3px solid var(--white);
-        color: var(--white);
+        color: var(--black);
         padding: 60px 25px 25px;
 
         .generic-modal-content-container {
@@ -42,7 +42,7 @@
 
             p {
                 margin-bottom: 25px;
-                color: var(--white);
+                color: var(--black);
                 font-size: 44px;
                 font-weight: 600;
                 line-height: 58px;
@@ -113,7 +113,7 @@
                 width: calc(100% - 20px);
                 height: 2px;
                 /* cross thickness */
-                background-color: var(--white);
+                background-color: var(--black);
             }
 
             .line::before {

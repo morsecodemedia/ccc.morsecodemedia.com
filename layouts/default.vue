@@ -4,16 +4,24 @@
       <a class="skip-main" href="#main">Skip to main content</a>
     </div>
     <nuxt id="main" ref="main" aria-label="main" role="main" />
+    <ModalNormalText :modal-name="modalNormalText" :modal-id="modalNormalText" />
+    <ModalLargeText :modal-name="modalLargeText" :modal-id="modalLargeText" />
   </div>
 </template>
 
 <script>
 import { mapGetters } from 'vuex'
+import ModalNormalText from '../components/modals/modalNormalText.vue'
+import ModalLargeText from '../components/modals/modalLargeText.vue'
 
 let bodyTag = null
 
 export default {
   name: 'App',
+  components: {
+    ModalNormalText,
+    ModalLargeText
+  },
   computed: {
     ...mapGetters('modals', ['isModalOpen'])
   },
@@ -52,26 +60,22 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content:
-            'An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.'
+          content: 'An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.'
         },
         {
           hid: 'ogdescription',
           property: 'og:description',
-          content:
-            'An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.'
+          content: 'An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.'
         },
         {
           hid: 'twdescription',
           name: 'twitter:description',
-          content:
-            'An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.'
+          content: 'An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.'
         },
         {
           hid: 'googledescription',
           itemprop: 'description',
-          content:
-            'An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.'
+          content: 'An accessibility checker tool for validating the color contrast based on WCAG 2.0 and WCAG 2.1 standards.'
         },
         {
           hid: 'ogurl',
