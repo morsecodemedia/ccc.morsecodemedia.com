@@ -13,7 +13,8 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin: 0 0 25px 0;
-  padding: 2%;
+  margin: 0 auto 25px;
+  padding: 2% 2% 0 2%;
+  max-width: 1200px;
 }
 </style>

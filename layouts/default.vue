@@ -1,9 +1,8 @@
 <template>
   <div>
-    <div id="skip">
-      <a class="skip-main" href="#main">Skip to main content</a>
-    </div>
+    <SiteHeader aria-label="site header" />
     <nuxt id="main" ref="main" aria-label="main" role="main" />
+    <SiteFooter aria-label="site footer" />
     <ModalNormalText :modal-name="NormalText" :modal-id="NormalText" />
     <ModalLargeText :modal-name="LargeText" :modal-id="LargeText" />
   </div>
@@ -13,6 +12,8 @@
 import { mapGetters } from 'vuex'
 import ModalNormalText from '../components/modals/modalNormalText.vue'
 import ModalLargeText from '../components/modals/modalLargeText.vue'
+import SiteHeader from '../components/global/header.vue'
+import SiteFooter from '../components/global/footer.vue'
 
 let bodyTag = null
 
@@ -20,7 +21,9 @@ export default {
   name: 'App',
   components: {
     ModalNormalText,
-    ModalLargeText
+    ModalLargeText,
+    SiteHeader,
+    SiteFooter
   },
   computed: {
     ...mapGetters('modals', ['isModalOpen'])
