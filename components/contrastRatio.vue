@@ -18,13 +18,8 @@ import a11yPlugin from 'colord/plugins/a11y'
 extend([a11yPlugin])
 
 export default {
-  name: 'ContrastRatio',
   data () {
     return {
-      aaNormal: false,
-      aaLarge: false,
-      aaaNormal: false,
-      aaaLarge: false,
       contrastRatio: ''
     }
   },
@@ -65,30 +60,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.contrast-container {
-  text-align: center;
-  padding: 0;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  > div {
-    text-align: center;
-    padding: 0;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  .contrast-ratio {
-    font-size: 60px;
-    line-height: 1em;
-    font-weight: bold;
-  }
-}
-</style>

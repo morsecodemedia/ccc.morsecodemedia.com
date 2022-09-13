@@ -95,5 +95,6 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  components: true
 }

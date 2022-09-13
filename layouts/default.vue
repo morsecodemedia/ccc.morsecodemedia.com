@@ -10,20 +10,20 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import ModalNormalText from '../components/modals/modalNormalText.vue'
-import ModalLargeText from '../components/modals/modalLargeText.vue'
-import SiteHeader from '../components/global/header.vue'
-import SiteFooter from '../components/global/footer.vue'
+import SiteHeader from '~/components/global/header.vue'
+import SiteFooter from '~/components/global/footer.vue'
+import ModalNormalText from '~/components/modals/modalNormalText.vue'
+import ModalLargeText from '~/components/modals/modalLargeText.vue'
 
 let bodyTag = null
 
 export default {
   name: 'App',
   components: {
-    ModalNormalText,
-    ModalLargeText,
     SiteHeader,
-    SiteFooter
+    SiteFooter,
+    ModalNormalText,
+    ModalLargeText
   },
   computed: {
     ...mapGetters('modals', ['isModalOpen'])

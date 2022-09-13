@@ -37,8 +37,8 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
+
 export default {
-  name: 'Colors',
   data () {
     return {
       bgColor: '',

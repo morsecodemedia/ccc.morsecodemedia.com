@@ -51,7 +51,6 @@ import a11yPlugin from 'colord/plugins/a11y'
 extend([a11yPlugin])
 
 export default {
-  name: 'WCAGTable',
   data () {
     return {
       aaNormal: false,
@@ -102,67 +101,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.wcag-container {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0;
-  .normal {
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    padding: 0 2% 2%;
-  }
-  .large {
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    padding: 0 2% 2%;
-  }
-  table {
-    text-align: left;
-    padding: 0px;
-    border-spacing: 0px;
-    tr {
-      &:nth-of-type(odd) {
-        th, td {
-          border-bottom: 1px solid lightgrey;
-        }
-      }
-    }
-    td {
-      color: #D10000;
-      &.noclass {
-        color: unset;
-      }
-      &.pass {
-        color: green;
-      }
-    }
-  }
-  button {
-    all: unset;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    span {
-      margin-left: 20px;
-      text-align: center;
-      height: 20px;
-      width: 20px;
-      border: 1px solid black;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    &:focus,
-    &:hover {
-      cursor: pointer;
-      outline: 1px dashed black;
-    }
-  }
-}
-</style>

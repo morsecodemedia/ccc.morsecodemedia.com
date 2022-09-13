@@ -3,25 +3,19 @@
     <Colors />
     <ContrastRatio />
     <WcagTable />
+    <div>
+      <ProtanomalyContrastRatio />
+      <ProtanomalyWCAGTable />
+    </div>
     <!-- <Form /> -->
   </div>
 </template>
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
-import Colors from '~/components/colors.vue'
-import ContrastRatio from '~/components/contrastRatio.vue'
-// import Form from '~/components/form.vue'
-import WcagTable from '~/components/wcagTable.vue'
 
 export default {
   name: 'Homepage',
-  components: {
-    // Form,
-    Colors,
-    ContrastRatio,
-    WcagTable
-  },
   computed: {
     ...mapGetters('colors', ['backgroundColorStore', 'textColorStore'])
   },
@@ -161,7 +155,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
