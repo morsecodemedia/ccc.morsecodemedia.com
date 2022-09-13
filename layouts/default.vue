@@ -4,8 +4,8 @@
       <a class="skip-main" href="#main">Skip to main content</a>
     </div>
     <nuxt id="main" ref="main" aria-label="main" role="main" />
-    <ModalNormalText :modal-name="modalNormalText" :modal-id="modalNormalText" />
-    <ModalLargeText :modal-name="modalLargeText" :modal-id="modalLargeText" />
+    <ModalNormalText :modal-name="NormalText" :modal-id="NormalText" />
+    <ModalLargeText :modal-name="LargeText" :modal-id="LargeText" />
   </div>
 </template>
 

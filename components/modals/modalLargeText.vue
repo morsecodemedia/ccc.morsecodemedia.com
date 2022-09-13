@@ -19,7 +19,7 @@
           <div class="generic-modal-content-container">
             <slot :modalName="modalName" :close="close" />
             <p class="large-text">
-              Large Text - <span class="lg-bold">19px bold</span> or 24px regular {{ modalTitle }}
+              Large Text - <span class="lg-bold">19px bold</span> or 24px regular {{ modalName }}
             </p>
             <p class="large-text">
               According to Web Content Accessibility Guidelines (WCAG), text and images of text should have a minimum contrast ratio of 4.5:1 (Level AA), while large text should have minimum contrast ratio of 3:1. For enhanced contrast (Level AAA), normal text and large text should have minimum contrast ratio of 7:1 and 4.5:1 respectively.

@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Header />
     <Colors />
     <ContrastRatio />
     <WcagTable />
@@ -12,6 +13,7 @@ import { mapGetters, mapMutations } from 'vuex'
 import Colors from '~/components/colors.vue'
 import ContrastRatio from '~/components/contrastRatio.vue'
 // import Form from '~/components/form.vue'
+import Header from '~/components/header.vue'
 import WcagTable from '~/components/wcagTable.vue'
 
 export default {
@@ -20,7 +22,8 @@ export default {
     // Form,
     Colors,
     ContrastRatio,
-    WcagTable
+    WcagTable,
+    Header
   },
   computed: {
     ...mapGetters('colors', ['backgroundColorStore', 'textColorStore'])

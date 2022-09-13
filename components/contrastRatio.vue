@@ -1,11 +1,12 @@
 <template>
-  <div
-    class="contrast-container"
-    :style="{backgroundColor: bgColor, color: txtColor}"
-  >
-    <p class="contrast-ratio">
-      {{ contrastRatio }}:1
-    </p>
+  <div class="contrast-container">
+    <h2>Regular Vision (Trichromatic)</h2>
+    <p>Can distinguish all three primary color, little to no blurriness</p>
+    <div :style="{backgroundColor: bgColor, color: txtColor}">
+      <p class="contrast-ratio">
+        {{ contrastRatio }}:1
+      </p>
+    </div>
   </div>
 </template>
 
@@ -74,6 +75,16 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  > div {
+    text-align: center;
+    padding: 0;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
   .contrast-ratio {
     font-size: 60px;
     line-height: 1em;
