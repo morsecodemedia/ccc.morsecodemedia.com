@@ -3,7 +3,7 @@
     <Colors />
     <ContrastRatio />
     <WcagTable />
-    <div>
+    <div v-show="showImpairments">
       <ProtanomalyContrastRatio />
       <ProtanomalyWCAGTable />
     </div>
@@ -17,7 +17,8 @@ import { mapGetters, mapMutations } from 'vuex'
 export default {
   name: 'Homepage',
   computed: {
-    ...mapGetters('colors', ['backgroundColorStore', 'textColorStore'])
+    ...mapGetters('colors', ['backgroundColorStore', 'textColorStore']),
+    ...mapGetters('impairments', ['showImpairments'])
   },
   mounted () {
     if (process.browser) {
